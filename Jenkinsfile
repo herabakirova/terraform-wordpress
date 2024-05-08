@@ -28,7 +28,7 @@ podTemplate(cloud: 'kubernetes', label: 'docker', yaml: template) {
     node ("docker") {
     container ("docker") {
         stage ("Checkout SCM") {
-        git branch: 'main', url: 'git@github.com:herabakirova/terraform-wordpress.git'
+        git branch: 'main', url: 'https://github.com/herabakirova/terraform-wordpress.git'
         }
         withCredentials([usernamePassword(credentialsId: 'docker', passwordVariable: 'DOCKER_PASS', usernameVariable: 'DOCKER_USER')]) {
         stage("Docker Build") {
