@@ -1,7 +1,7 @@
 FROM alpine:latest
 
 # Install dependencies
-RUN apk add --no-cache curl unzip
+RUN apk add --no-cache curl unzip -y
 
 # Download and install Terraform
 RUN curl https://releases.hashicorp.com/terraform/1.8.2/terraform_1.8.2_linux_amd64.zip &&\
