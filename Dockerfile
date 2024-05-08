@@ -4,9 +4,9 @@ FROM alpine:latest
 RUN apk add --no-cache wget unzip
 
 # Download and install Terraform
-RUN wget https://releases.hashicorp.com/terraform/1.8.2/terraform_1.8.2_linux_amd64.zip \
-    unzip terraform_1.8.2_linux_amd64.zip \
-    mv terraform /usr/local/bin \
+RUN wget https://releases.hashicorp.com/terraform/1.8.2/terraform_1.8.2_linux_amd64.zip &&\
+    unzip terraform_1.8.2_linux_amd64.zip &&\
+    mv terraform /usr/local/bin &&\
     rm -f terraform_1.8.2_linux_amd64.zip
 
 # Set working directory
