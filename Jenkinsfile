@@ -39,7 +39,7 @@ podTemplate(cloud: 'kubernetes', label: 'docker', yaml: template) {
         docker login -u ${DOCKER_USER} -p ${DOCKER_PASS}
         docker push ${DOCKER_USER}/terraform:${number}.0
         """
-        build 'wordpress'
+        build 'wordpress/dev'
         }
     }
     }
